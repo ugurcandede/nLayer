@@ -27,17 +27,38 @@ namespace nLayer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             (new bolumService()).bolumKaydet(bAdTxb.Text, bTelTxb.Text);
         }
+        private void BtnListele_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("Bu Buton Henüz Aktif Değil!", btnListele);
 
+        }
         private void BtnListele_Click(object sender, EventArgs e)
         {
-           // listBox1.Items.Add((new bolumService).bolumListele());
+            toolTip1.Show("Bu Buton Henüz Aktif Değil!", btnListele);
+            // listBox1.Items.Add((new bolumService).bolumListele());
         }
+
+        private void MetroLabel3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/ugurcandede/nLayer");
+        }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.linkedin.com/in/ugurcandede");
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/ugurcandede");
+        }
+
+
     }
 }

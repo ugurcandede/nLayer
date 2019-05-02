@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+
+using MySql.Data.MySqlClient;
 
 using nLayer.Service;
 using nLayer.Domain;
 using nLayer.DAL;
 
+using MetroFramework;
+using MetroFramework.Forms;
 namespace nLayer.Service
 {
     class bolumService
@@ -31,8 +34,9 @@ namespace nLayer.Service
         {
             try
             {
-                MySqlCommand komut = new MySqlCommand("select * from bolum;)", (new bolumlerDAO()).baglan());
+                MySqlCommand komut = new MySqlCommand("SELECT * FROM dededb.bolum", (new bolumlerDAO()).baglan());
                 komut.ExecuteNonQuery();
+                
             }
             catch (Exception hata)
             {
