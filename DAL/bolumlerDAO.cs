@@ -18,17 +18,16 @@ namespace nLayer.DAL
     {
         public MySqlConnection baglan()
         {
+            //MySqlConnection conn = new MySqlConnection("Server=localhost;Database=dededb;Uid=root;Pwd=");
             MySqlConnection conn = new MySqlConnection("Server=172.21.54.3;Database=dededb;Uid=ugurcandede;Pwd=dede.123");
             conn.Open();
             MessageBox.Show("Veri Tabanı Bağlantısı Başarılı!");
             return conn;
         }
-
-        public MySqlCommand CreateConnection(string sorgu)
-        {
-            MySqlCommand komut = new MySqlCommand(sorgu, baglan());
-            return komut;
-        }
-
+        //public MySqlCommand CreateConnection(string sorgu)
+        //{
+        //    MySqlCommand komut = new MySqlCommand(sorgu, baglan());
+        //    return komut;
+        //}
     }
 }

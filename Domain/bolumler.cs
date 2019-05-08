@@ -18,7 +18,7 @@ namespace nLayer.Domain
         public string BolumAd { get => bolumAd; set => bolumAd = value; }
         public string BolumTel { get => bolumTel; set => bolumTel = value; }
 
-        public bolumler(string gBolumID,string gBolumAd,string gBolumTel)
+        public bolumler(string gBolumID, string gBolumAd, string gBolumTel)
         {
             this.BolumID = gBolumID;
             this.BolumAd = gBolumAd;

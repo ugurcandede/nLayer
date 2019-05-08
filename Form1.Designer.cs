@@ -43,6 +43,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnGuncelle = new MetroFramework.Controls.MetroButton();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -86,6 +87,7 @@
             // 
             // metroPanel2
             // 
+            this.metroPanel2.Controls.Add(this.btnGuncelle);
             this.metroPanel2.Controls.Add(this.bTelTxb);
             this.metroPanel2.Controls.Add(this.bAdTxb);
             this.metroPanel2.Controls.Add(this.metroLabel2);
@@ -193,6 +195,8 @@
             // 
             // metroLabel3
             // 
+            this.metroLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.Location = new System.Drawing.Point(240, 303);
             this.metroLabel3.Name = "metroLabel3";
@@ -203,6 +207,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(641, 291);
             this.pictureBox1.Name = "pictureBox1";
@@ -214,6 +220,8 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(677, 291);
             this.pictureBox2.Name = "pictureBox2";
@@ -222,6 +230,16 @@
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Location = new System.Drawing.Point(91, 187);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(189, 47);
+            this.btnGuncelle.TabIndex = 11;
+            this.btnGuncelle.Text = "&Güncelle";
+            this.btnGuncelle.UseSelectable = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // frmBolumKaydet
             // 
@@ -266,6 +284,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolTip toolTip1;
+        private MetroFramework.Controls.MetroButton btnGuncelle;
     }
 }
 

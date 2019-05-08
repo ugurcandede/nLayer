@@ -30,20 +30,15 @@ namespace nLayer.Service
                 MessageBox.Show("Kayıt Oluşturulurken Hata Meydana Geldi\n" + hata.ToString(), "HATA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void bolumListele()
+        public MySqlDataReader bolumListele()
         {
-            try
-            {
-                MySqlCommand komut = new MySqlCommand("SELECT * FROM dededb.bolum", (new bolumlerDAO()).baglan());
-                komut.ExecuteNonQuery();
-                
-            }
-            catch (Exception hata)
-            {
-                MessageBox.Show("Kayıt Oluşturulurken Hata Meydana Geldi\n" + hata.ToString(), "HATA!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-
+            MySqlCommand komut = new MySqlCommand("SELECT * FROM bolum", (new bolumlerDAO()).baglan());
+           return komut.ExecuteReader();
+        }
+        public void bolumGuncelle(int gID, string gAd, string gTel)
+        {
+            MySqlCommand komut = new MySqlCommand("UPDATE bolum SET bolumAdi = '" + gAd + "', bolumTel = " + gTel + " WHERE (`id` = '" + gID + "')", new bolumlerDAO().baglan());            komut.ExecuteNonQuery();
+            MessageBox.Show("Kayıt Başarılıyla Kaydedildi", "Tamamlandı", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }
